@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import numpy as np
+
+
 def add_arrays(arr1, arr2):
     """
     Function that adds two arrays
