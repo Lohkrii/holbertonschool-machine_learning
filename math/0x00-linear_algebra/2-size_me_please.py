@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-import numpy as np
-
 
 def matrix_shape(matrix):
     """
     Returns the shape of a matrix.
     """
-    return (np.array(matrix).shape)
+    shape = [len(matrix)]
+
+    while type(matrix) == list:
+        if type(matrix[0]) == list:
+            shape.append(len(matrix[0]))
+            matrix = matrix[0]
+        else:
+            matrix = matrix[0]
+    return shape
